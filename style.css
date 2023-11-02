@@ -40,16 +40,17 @@ h1{
     padding: 5px 10px;
     border: 2px solid rgb(182, 47, 166);
     border-radius: 5px;
-    width: 75px;
+    width: 90px;
     height: 35px;
     position: relative;
+    transition: all 0.3s;
 }
 .category.checked{
     background-image: linear-gradient(to right, rgb(52, 137, 241) , rgb(147, 26, 187));
     scale: 1.1;
 }
 .radio{
-    width: 75px;
+    width: 90px;
     height: 35px;
     position: absolute;
     top: 0;
@@ -90,6 +91,7 @@ h1{
     backdrop-filter: blur(5px);
     opacity: 0;
     pointer-events: none;
+    transition: all 0.3s;
 }
 #random-joke-container{
     background-color: white;
@@ -106,6 +108,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
 }
 #random-joke-container i{
     position: absolute;
