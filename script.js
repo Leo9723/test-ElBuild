@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     function getCategories() {
         $.get("https://api.chucknorris.io/jokes/categories", function(data) {
             for (var i = 0; i < data.length; i++) {
-                var category = $("<input type='radio' name='category'>");
+                var category = $("<input type='radio' name='category' class='radio'>");
                 category.val(data[i]);
                 var label = $("<label>").text(data[i]);
                 var div = $("<div class='category'>").append(category, label);
@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
         $("#jokes-container").empty();
         for (var i = 0; i < 4; i++) {
             $.get("https://api.chucknorris.io/jokes/random?category=" + category, function (data) {
-                $("#jokes-container").append("<p>" + data.value + "</p>");
+                $("#jokes-container").append("<p> <i class='fa-solid fa-arrow-right'></i> " + data.value + "</p>");
             });
         }
     }
@@ -66,6 +66,14 @@ jQuery(document).ready(function($){
         $(".effect-bkg").removeClass("active");
     })
 
+
+
+    $("#category-list").on("change", "input[type='radio']", function () {
+        $(".category").removeClass("checked");
+        if ($(this).is(":checked")) {
+            $(this).closest(".category").addClass("checked");
+        }
+    });
 
 
 });

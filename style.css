@@ -2,6 +2,12 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(rgb(20, 20, 20), rgb(48, 48, 48));
+    height: 100vh;
 }
 
 
@@ -18,8 +24,10 @@ h1{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    background-color: beige;
+    border: 3px solid rgb(52, 137, 241);
+    border-radius: 25px;
     margin: 20px auto;
+    padding: 30px;
 }
 .category-container{
     width: calc(100% / 8);
@@ -29,13 +37,39 @@ h1{
     align-items: center;
 }
 .category{
-    background-color: green;
     padding: 5px 10px;
+    border: 2px solid rgb(182, 47, 166);
+    border-radius: 5px;
+    width: 75px;
+    height: 35px;
+    position: relative;
+}
+.category.checked{
+    background-image: linear-gradient(to right, rgb(52, 137, 241) , rgb(147, 26, 187));
+    scale: 1.1;
+}
+.radio{
+    width: 75px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
+#submit-button, #random-joke-button{
+    padding: 10px 20px;
+    border: 2px solid rgb(182, 47, 166);
+    border-radius: 5px;
+    background-image: linear-gradient(to left, rgb(52, 137, 241) , rgb(147, 26, 187));
+}
 
 #jokes-container{
     width: 70%;
+    border: 3px solid rgb(182, 47, 166);
+    border-radius: 25px;
+    margin: 20px auto;
+    padding: 30px;
 }
 #jokes-container p {
     padding: 10px 0px;
@@ -77,6 +111,10 @@ h1{
     position: absolute;
     top: 20px;
     right: 20px;
+    color: black !important;
+}
+#random-joke-container p{
+    color: black !important;
 }
 .effect-bkg.active, #random-joke-container.active{
     opacity: 1;
