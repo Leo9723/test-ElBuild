@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <h1>Chuck Norris Jokes</h1>
@@ -16,8 +17,15 @@
     
     <div id="jokes-container"></div>
 
-    <div id="random-joke-container"></div>
-    <button id="random-joke-button">Genera battuta casuale</button>
+    <div class="effect-bkg"></div>
+    <div id="random-joke-container">
+        <div id="random-joke-label"></div>
+        <i class="fa-solid fa-x close"></i>
+    </div>
+
+    <div class="random-input-container">
+        <button id="random-joke-button">Genera battuta casuale</button>
+    </div>
     
 
     <script src="./script.js"></script>

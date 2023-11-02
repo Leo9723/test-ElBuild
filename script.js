@@ -6,8 +6,9 @@ jQuery(document).ready(function($){
                 var category = $("<input type='radio' name='category'>");
                 category.val(data[i]);
                 var label = $("<label>").text(data[i]);
-                var div = $("<div>").append(category, label);
-                $("#category-list").append(div);
+                var div = $("<div class='category'>").append(category, label);
+                var divContainer = $("<div class='category-container'>").append(div);
+                $("#category-list").append(divContainer);
             }
             getJokes(data[0]);
         });
@@ -33,8 +34,8 @@ jQuery(document).ready(function($){
 
     function getRandomJoke() {
         $.get("https://api.chucknorris.io/jokes/random", function (data) {
-            $("#random-joke-container").empty();
-            $("#random-joke-container").append("<p>" + data.value + "</p>");
+            $("#random-joke-label").empty();
+            $("#random-joke-label").append("<p>" + data.value + "</p>");
         });
     }
 
@@ -45,6 +46,26 @@ jQuery(document).ready(function($){
     $("#random-joke-button").on("click", function () {
         getRandomJoke();
     });
+
+
+    // inizio stile
+
+    $("#random-joke-button").click(function(){
+        console.log("we")
+        $("#random-joke-container").addClass("active");
+        $(".effect-bkg").addClass("active");
+    })
+
+    $(".close").click(function(){
+        $("#random-joke-container").removeClass("active");
+        $(".effect-bkg").removeClass("active");
+    })
+
+    $(".effect-bkg").click(function(){
+        $("#random-joke-container").removeClass("active");
+        $(".effect-bkg").removeClass("active");
+    })
+
 
 
 });
