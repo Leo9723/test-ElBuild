@@ -123,3 +123,17 @@ h1{
     opacity: 1;
     pointer-events: all;
 }
+
+/* media queries */
+
+@media screen and (max-width: 960px){
+    .category-container{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .category-container{
+        width: 50%;
+    }
+}
